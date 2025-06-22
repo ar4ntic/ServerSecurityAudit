@@ -1,7 +1,7 @@
-# Documentation, Usage & Knowledge Base
+# PublicServer SecurityScan: Documentation, Usage & Knowledge Base
 
 
-- [Documentation, Usage \& Knowledge Base](#documentation-usage--knowledge-base)
+- [PublicServer SecurityScan: Documentation, Usage \& Knowledge Base](#publicserver-securityscan-documentation-usage--knowledge-base)
 - [Overview](#overview)
 - [How the Audit Works](#how-the-audit-works)
 - [Detailed Check Explanations](#detailed-check-explanations)
@@ -62,7 +62,7 @@
 ---
 
 # Overview
-The Server Security Audit tool is a comprehensive solution designed to help administrators, DevOps engineers, and security professionals assess and improve the security posture of public-facing servers. It automates a suite of essential security checks that would typically require multiple specialized tools and expertise to perform manually.
+The PublicServer SecurityScan tool is a comprehensive vulnerability assessment and security auditing solution specifically designed for internet-exposed systems. It helps administrators, DevOps engineers, and security professionals identify, assess, and remediate security weaknesses in their external attack surface. This tool combines multiple security scanning capabilities that would typically require several specialized tools and security expertise to perform manually.
 
 Key features of this tool include:
 
@@ -76,8 +76,8 @@ Whether you're preparing a server for production deployment, conducting regular 
 
 ---
 
-# How the Audit Works
-The Server Security Audit tool employs a modular architecture where each security check is implemented as a separate Python module that integrates with external security tools. When you run the audit, the following process takes place:
+# How the Security Scan Works
+The PublicServer SecurityScan tool employs a modular architecture where each security check is implemented as a separate Python module that integrates with external security tools. When you run the scan, the following process takes place:
 
 1. **Initialization**: The tool sets up the necessary environment, validates prerequisites, and creates directories for output.
 
@@ -477,7 +477,7 @@ Each security check is designed to run independently, so you can choose which on
 ---
 
 # How to Use the App
-The Server Security Audit tool is designed to be user-friendly while providing deep security insights. Here's a detailed guide on how to use it effectively:
+The PublicServer SecurityScan tool is designed to be user-friendly while providing deep security insights. Here's a detailed guide on how to use it effectively:
 
 ## Command-Line Usage
 
@@ -549,7 +549,7 @@ Once started, the tool will:
 
 # Understanding the Results
 
-The Server Security Audit tool provides results in multiple formats to help you easily identify and address security issues.
+The PublicServer SecurityScan tool provides results in multiple formats to help you easily identify and address security issues.
 
 ## Reading the Output
 
@@ -595,12 +595,12 @@ Each finding includes:
 
 # Example Output
 
-Below are examples of what output from the Server Security Audit tool typically looks like. This will help you understand how to interpret the results.
+Below are examples of what output from the PublicServer SecurityScan tool typically looks like. This will help you understand how to interpret the results.
 
 ## Summary Output Example
 
 ```
-==== SERVER SECURITY AUDIT SUMMARY ====
+==== PUBLICSERVER SECURITYSCAN SUMMARY ====
 Target: example.com (203.0.113.10)
 Scan Date: 2023-06-15 14:30:22
 Report ID: SSA-202306151430
@@ -913,7 +913,7 @@ Understanding common vulnerabilities helps prioritize your security efforts:
 
 ## Customization and Extension
 
-The Server Security Audit tool is designed to be modular and extensible, allowing you to tailor it to your specific security needs.
+The PublicServer SecurityScan tool is designed to be modular and extensible, allowing you to tailor it to your specific security needs.
 
 ## Customizing Existing Checks
 
@@ -1021,7 +1021,7 @@ The tool supports various advanced configuration options:
 
 ## Tips for Effective Use
 
-Getting the most out of your security audits requires proper planning and follow-through. Here are practical tips for maximizing the effectiveness of the Server Security Audit tool:
+Getting the most out of your security scans requires proper planning and follow-through. Here are practical tips for maximizing the effectiveness of the PublicServer SecurityScan tool:
 
 | **Best Practice Category** | **Recommendations** | **Benefits** | **Implementation Complexity** |
 |----------------------|-----------------|----------|--------------------------|
@@ -1035,7 +1035,7 @@ Getting the most out of your security audits requires proper planning and follow
 
 ## Security Tools Reference
 
-The Server Security Audit tool integrates with and complements many popular security tools. Understanding these tools helps you interpret results and extend your security testing:
+The PublicServer SecurityScan tool integrates with and complements many popular security tools. Understanding these tools helps you interpret results and extend your security testing:
 
 ## Network Security Tools
 
@@ -1243,7 +1243,7 @@ Understanding security terminology is crucial for interpreting audit results eff
 | **Question** | **Answer** |
 |---------|--------|
 | **Can I use this tool on internal/private servers?** | Yes, the tool is suitable for both internal and public-facing servers. However, always ensure you have proper authorization before scanning any system, and be aware that some checks may generate significant traffic. |
-| **Will this tool make changes to my server?** | No, the Server Security Audit tool is designed as a read-only assessment tool. It does not modify system configurations or make changes to your server. All operations are non-intrusive. |
+| **Will this tool make changes to my server?** | No, the PublicServer SecurityScan tool is designed as a read-only assessment tool. It does not modify system configurations or make changes to your server. All operations are non-intrusive. |
 | **How often should I run security audits?** | For critical systems, monthly audits are recommended. Less critical systems should be audited at least quarterly. Additionally, run audits after significant system changes, upgrades, or before moving systems to production. |
 
 ## Technical Questions
@@ -1276,7 +1276,7 @@ If you have questions about specific findings or how to resolve them, please:
 
 1. **Check the Documentation First**: Many common questions are already answered in this document or the README.
 
-2. **Open an Issue**: If you need further assistance, open an issue on the [GitHub repository](https://github.com/ar4ntic/utilities/issues) with:
+2. **Open an Issue**: If you need further assistance, open an issue on the [GitHub repository](https://github.com/ar4ntic/ServerSecurityAudit/issues) with:
    - A clear description of your question or problem
    - Relevant sections of your output (with sensitive information removed)
    - Your operating system and tool version

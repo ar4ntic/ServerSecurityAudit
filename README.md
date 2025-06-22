@@ -1,24 +1,39 @@
-# Server Security Audit
+# PublicServer SecurityScan
 
-A cross-platform Python application to perform basic security audits on servers. It checks for common security issues and provides a summary report to help you improve your server's security posture.
+A comprehensive, cross-platform security assessment tool for public-facing servers. This Python applic### macOS
+
+1. Install [Python 3.8+](https://www.python.org/downloads/) if not already installed (macOS usually comes with Python, but you may want to upgrade).
+2. Download the main script and requirements file:
+
+   ```sh
+   wget https://github.com/ar4ntic/PublicServerScan/raw/main/StartScan.py
+   wget https://github.com/ar4ntic/PublicServerScan/raw/main/requirements-dev.txt
+   wget -r -np -nH --cut-dirs=2 https://github.com/ar4ntic/PublicServerScan/raw/main/app/omates vulnerability scanning and security auditing processes to identify misconfigurations and vulnerabilities in internet-exposed systems. Designed for security professionals, system administrators, and DevOps engineers who need an efficient way to evaluate their external attack surface.
 
 ## Features
 
-- Scans for open ports
-- Reviews firewall status
-- Lists users with sudo/admin privileges
-- Detects world-writable files
-- Reviews SSH configuration
-- Analyzes SSL/TLS certificates
-- Checks HTTP security headers
-- Tests for directory brute-force vulnerabilities
-- Examines DNS configuration
-- Provides actionable recommendations
-- Easy to use and lightweight
+- **External Attack Surface Analysis**: Comprehensive port scanning to identify exposed services
+- **Web Security Assessment**: Checks HTTP security headers and tests for directory brute-force vulnerabilities
+- **TLS Security**: Analyzes SSL/TLS certificates for vulnerabilities and misconfigurations
+- **Network Security**: Reviews firewall status and configuration to prevent unauthorized access
+- **Remote Access Security**: Evaluates SSH configuration for hardening compliance
+- **DNS Security**: Examines DNS configuration to prevent information leakage and zone transfer attacks
+- **System Security**: Lists users with sudo/admin privileges and detects world-writable files
+- **Actionable Reporting**: Provides clear recommendations prioritized by security impact
+- **Non-Invasive**: Performs read-only operations that won't disrupt your production systems
+- **Cross-Platform**: Works on Linux, Windows, and macOS with minimal dependencies
 
 ## Why Use This Tool?
 
-Server Security Audit is designed for system administrators, DevOps engineers, and anyone who wants a quick, scriptable way to check for common server misconfigurations. It works on both Windows and macOS, and requires only Python 3.8+.
+PublicServer SecurityScan is specifically tailored for internet-facing systems where security vulnerabilities can lead to significant breaches. It functions as both a vulnerability scanner and security auditor, identifying misconfigurations and security weaknesses in externally accessible services. Security professionals use this tool to:
+
+- Discover exposed services and potentially vulnerable endpoints
+- Assess TLS/SSL configuration and certificate validity
+- Identify risky server configurations before attackers can exploit them  
+- Generate comprehensive reports for security compliance and remediation
+- Schedule automated security posture assessments
+
+The tool works on Linux, Windows, and macOS, requiring only Python 3.8+ and is designed to be integrated into your security operations workflow.
 
 ## Documentation
 
@@ -35,7 +50,7 @@ For comprehensive information about the tool, security checks, best practices, a
 
 ## Prerequisites
 
-Before running Server Security Audit, you need Python 3.8 or newer.
+Before running PublicServer SecurityScan, you need Python 3.8 or newer.
 
 - Some security checks require external command-line tools such as `nmap`, `curl`, `dig`, `openssl`, etc. Please ensure these are installed and available in your system PATH for full functionality.
   - On macOS, you can install most tools with Homebrew, e.g.:
@@ -84,7 +99,7 @@ If you see a version number 3.8 or higher, you are ready to proceed.
 
 ## Installation
 
-You can install and run the Server Security Audit app without cloning the entire repository. Simply download the latest version of the app using `wget` or `curl`.
+You can install and run the PublicServer SecurityScan app without cloning the entire repository. Simply download the latest version of the app using `wget` or `curl`.
 
 ### Windows
 
@@ -92,14 +107,14 @@ You can install and run the Server Security Audit app without cloning the entire
 2. Download the main script and requirements file:
 
    ```sh
-   wget https://github.com/ar4ntic/utilities/raw/main/Server_Security_Audit/StartAudit.py
-   wget https://github.com/ar4ntic/utilities/raw/main/Server_Security_Audit/requirements-dev.txt
-   wget -r -np -nH --cut-dirs=2 https://github.com/ar4ntic/utilities/raw/main/Server_Security_Audit/app/
+   wget https://github.com/ar4ntic/or w/main/StartScan.py
+   wget https://github.com/ar4ntic/PublicServerScan/raw/main/requirements-dev.txt
+   wget -r -np -nH --cut-dirs=2 https://github.com/ar4ntic/PublicServerScan/raw/main/app/
    ```
    Or use `curl`:
    ```sh
-   curl -O https://github.com/ar4ntic/utilities/raw/main/Server_Security_Audit/StartAudit.py
-   curl -O https://github.com/ar4ntic/utilities/raw/main/Server_Security_Audit/requirements-dev.txt
+   curl -O https://github.com/ar4ntic/ServerSecurityAudit/raw/main/StartAudit.py
+   curl -O https://github.com/ar4ntic/ServerSecurityAudit/raw/main/requirements-dev.txt
    # Download the app directory as needed
    ```
 
@@ -116,10 +131,10 @@ You can install and run the Server Security Audit app without cloning the entire
    pip install -r requirements-dev.txt
    ```
 
-5. Run the audit:
+5. Run the scan:
 
    ```sh
-   python StartAudit.py
+   python StartScan.py
    ```
 
 ### macOS
@@ -128,14 +143,14 @@ You can install and run the Server Security Audit app without cloning the entire
 2. Download the main script and requirements file:
 
    ```sh
-   wget https://github.com/ar4ntic/utilities/raw/main/Server_Security_Audit/StartAudit.py
-   wget https://github.com/ar4ntic/utilities/raw/main/Server_Security_Audit/requirements-dev.txt
-   wget -r -np -nH --cut-dirs=2 https://github.com/ar4ntic/utilities/raw/main/Server_Security_Audit/app/
+   wget https://github.com/ar4ntic/ServerSecurityAudit/raw/main/StartAudit.py
+   wget https://github.com/ar4ntic/ServerSecurityAudit/raw/main/requirements-dev.txt
+   wget -r -np -nH --cut-dirs=2 https://github.com/ar4ntic/PublicServerScan/raw/main/app/
    ```
    Or use `curl`:
    ```sh
-   curl -O https://github.com/ar4ntic/utilities/raw/main/Server_Security_Audit/StartAudit.py
-   curl -O https://github.com/ar4ntic/utilities/raw/main/Server_Security_Audit/requirements-dev.txt
+   curl -O https://github.com/ar4ntic/PublicServerScan/raw/main/StartScan.py
+   curl -O https://github.com/ar4ntic/PublicServerScan/raw/main/requirements-dev.txt
    # Download the app directory as needed
    ```
 
@@ -152,10 +167,10 @@ You can install and run the Server Security Audit app without cloning the entire
    pip install -r requirements-dev.txt
    ```
 
-5. Run the audit:
+5. Run the scan:
 
    ```sh
-   python3 StartAudit.py
+   python3 StartScan.py
    ```
 
 ## Troubleshooting
@@ -173,7 +188,7 @@ If you encounter issues or have suggestions, please:
 
 1. Check the [comprehensive documentation](documentation.md) for answers to common questions and troubleshooting tips.
 2. Review the [FAQ section](documentation.md#faq) for solutions to frequently encountered issues.
-3. If you still need help, open an issue on the [GitHub repository](https://github.com/ar4ntic/utilities/issues) with details about your problem.
+3. If you still need help, open an issue on the [GitHub repository](https://github.com/ar4ntic/PublicServerScan/issues) with details about your problem.
 
 ## Notes
 
@@ -202,4 +217,4 @@ Special thanks to the maintainers and contributors of these projects for their v
 
 ---
 
-**Found a bug? Have a feature request?** Please open an [issue](https://github.com/ar4ntic/utilities/issues)!
+**Found a bug? Have a feature request?** Please open an [issue](https://github.com/ar4ntic/PublicServerScan/issues)!

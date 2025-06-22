@@ -1,8 +1,8 @@
 """
-Server Security Audit Tool - Package Definition
+PublicServer SecurityScan Tool - Package Definition
 
 This package provides a comprehensive tool for running various security
-scanners on target servers, with a clean per-user install directory,
+scanners on public-facing servers, with a clean per-user install directory,
 command-line and GUI interfaces, and modular security check components.
 """
 

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Command-line interface for the Security Audit Tool.
+Command-line interface for the PublicServer SecurityScan Tool.
 
 This module parses command-line arguments and calls the main functionality
-in core.py to run security checks.
+in core.py to run security scans.
 """
 
 import argparse
@@ -29,7 +29,7 @@ def parse_args(args: Optional[List[str]] = None) -> argparse.Namespace:
         argparse.Namespace: Parsed arguments
     """
     parser = argparse.ArgumentParser(
-        description=f"{APP_NAME} v{APP_VERSION} - A comprehensive security audit tool."
+        description=f"{APP_NAME} v{APP_VERSION} - A comprehensive security scanning tool for public-facing servers."
     )
     
     parser.add_argument("--target", "-t", help="Target hostname or IP address")

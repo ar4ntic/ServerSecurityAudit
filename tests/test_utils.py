@@ -31,7 +31,7 @@ class TestUtils:
         """Test that setup_logging returns a logger."""
         logger = setup_logging()
         assert isinstance(logger, logging.Logger)
-        assert logger.name == "security_audit"
+        assert logger.name == "security_scan"
     
     @patch('subprocess.run')
     def test_run_command_success(self, mock_run):
@@ -126,7 +126,7 @@ class TestUtils:
         # Verify directory was created and has correct name format
         assert output_dir.exists()
         assert output_dir.is_dir()
-        assert "audit_example.com_" in str(output_dir)
+        assert "scan_example.com_" in str(output_dir)
         
         # Clean up
         output_dir.rmdir()

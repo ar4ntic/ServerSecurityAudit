@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Utility functions for the Security Audit Tool.
+Utility functions for the PublicServer SecurityScan Tool.
 
 This module provides shared helper functions for subprocess operations,
 logging, path handling, and other common operations.
@@ -32,7 +32,7 @@ def setup_logging(log_file: Optional[str] = None) -> logging.Logger:
     if log_file is None:
         # Create a timestamped log file
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        log_file = LOGS_DIR / f"security_audit_{timestamp}.log"
+        log_file = LOGS_DIR / f"security_scan_{timestamp}.log"
         
         # Ensure logs directory exists
         LOGS_DIR.mkdir(exist_ok=True, parents=True)
@@ -47,7 +47,7 @@ def setup_logging(log_file: Optional[str] = None) -> logging.Logger:
         ]
     )
     
-    return logging.getLogger("security_audit")
+    return logging.getLogger("security_scan")
 
 # Subprocess wrappers
 def run_command(cmd: str, output_file: str, timeout: int = DEFAULT_COMMAND_TIMEOUT) -> bool:
@@ -136,7 +136,7 @@ def sanitize_target(target: str) -> str:
 
 def create_output_dir(target: str) -> Path:
     """
-    Create a timestamped output directory for the audit.
+    Create a timestamped output directory for the scan.
     
     Args:
         target (str): Target hostname or IP address
@@ -146,7 +146,7 @@ def create_output_dir(target: str) -> Path:
     """
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     sanitized_target = sanitize_target(target)
-    output_dir = Path(f"audit_{sanitized_target}_{timestamp}")
+    output_dir = Path(f"scan_{sanitized_target}_{timestamp}")
     output_dir.mkdir(exist_ok=True, parents=True)
     return output_dir
 

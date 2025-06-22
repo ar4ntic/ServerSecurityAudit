@@ -147,7 +147,7 @@ def mock_app_dir(temp_home_dir):
     from app.constants import APP_DIR, VENV_DIR, WORDLISTS_DIR, LOGS_DIR
     
     # Create the main directory structure
-    app_dir = temp_home_dir / ".ServerSecurityAudit"
+    app_dir = temp_home_dir / ".PublicServerScan"
     app_dir.mkdir(exist_ok=True)
     
     venv_dir = app_dir / "venv"

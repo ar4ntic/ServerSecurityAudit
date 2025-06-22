@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Core functionality for the Security Audit Tool.
+Core functionality for the PublicServer SecurityScan Tool.
 
-This module orchestrates all the security checks and provides the main
+This module orchestrates all the security scans and provides the main
 run function for both command-line and GUI operation.
 """
 
@@ -103,7 +103,7 @@ class TaskRunner:
 
 def run(args):
     """
-    Main entry point for the security audit.
+    Main entry point for the security scan.
     
     Args:
         args (argparse.Namespace): Command line arguments
@@ -175,7 +175,7 @@ def run_cli_mode(target, output_dir, checks):
     Returns:
         bool: True if all checks succeeded, False otherwise
     """
-    logger.info(f"Running CLI mode security audit on {target}")
+    logger.info(f"Running CLI mode security scan on {target}")
     
     all_success = True
     for i, check in enumerate(checks):
@@ -187,7 +187,7 @@ def run_cli_mode(target, output_dir, checks):
             logger.error(f"{check.__name__} failed")
             all_success = False
     
-    logger.info(f"Security audit complete. Results saved to {output_dir}")
+    logger.info(f"Security scan complete. Results saved to {output_dir}")
     return all_success
 
 def run_gui_mode(target, output_dir, checks):
@@ -205,11 +205,11 @@ def run_gui_mode(target, output_dir, checks):
     import tkinter as tk
     from tkinter import ttk, messagebox
     
-    logger.info(f"Running GUI mode security audit on {target}")
+    logger.info(f"Running GUI mode security scan on {target}")
     
     # Create progress window
     root = tk.Tk()
-    root.title("Security Audit Progress")
+    root.title("PublicServer SecurityScan Progress")
     root.geometry("600x400")
     
     # Add progress elements
@@ -269,10 +269,10 @@ def run_gui_mode(target, output_dir, checks):
         status_text.see(tk.END)
         
         # Update UI
-        progress_label.config(text="Audit completed")
+        progress_label.config(text="Scan completed")
         
         # Show completion message
-        messagebox.showinfo("Audit Complete", f"Security audit completed!\nResults saved in: {output_dir}")
+        messagebox.showinfo("Scan Complete", f"Security scan completed!\nResults saved in: {output_dir}")
         root.destroy()
         
         # Store the results in the enclosing scope

@@ -6,7 +6,7 @@ This script serves as the main entry point for running security scans on target 
 It provides both command-line and GUI interfaces using the refactored package structure.
 
 Usage:
-    python StartAudit.py [--target example.com] [--checks ping port_scan] [--gui] [--headless]
+    python StartScan.py [--target example.com] [--checks ping port_scan] [--gui] [--headless]
 """
 
 import sys
