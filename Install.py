@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-PublicServer SecurityScan - Installation Script
+Public Server Scanner - Installation Script
 
-This script installs and configures all dependencies required by the PublicServer SecurityScan Tool,
+This script installs and configures all dependencies required by the Public Server Scanner Tool,
 setting up the per-user installation directory structure.
 
 Usage:
@@ -27,7 +27,7 @@ logger = logging.getLogger("Installer")
 
 def parse_args():
     """Parse command line arguments."""
-    parser = argparse.ArgumentParser(description="PublicServer SecurityScan Tool - Installer")
+    parser = argparse.ArgumentParser(description="Public Server Scanner Tool - Installer")
     parser.add_argument("--no-venv", action="store_true", 
                       help="Skip virtual environment creation")
     parser.add_argument("--skip-wordlists", action="store_true", 
@@ -44,7 +44,7 @@ def main():
         # Use relative import when run as script
         from app.installer import run_installation
         
-        logger.info("Starting PublicServer SecurityScan Tool installation...")
+        logger.info("Starting Public Server Scanner Tool installation...")
         success = run_installation(
             no_venv=args.no_venv,
             skip_wordlists=args.skip_wordlists
@@ -57,7 +57,7 @@ def main():
             print("=" * 60)
             print("\nAll dependencies have been successfully installed!")
             print("\nNext steps:")
-            print("1. Run the PublicServer SecurityScan Tool with:")
+            print("1. Run the Public Server Scanner Tool with:")
             print("   python StartScan.py [--target example.com]")
             print("\nIf you encounter any issues, check installation.log for details.")
             print("=" * 60 + "\n")

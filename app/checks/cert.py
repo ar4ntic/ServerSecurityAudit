@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Certificate analysis module for the Security Audit Tool.
+Certificate analysis module for the Public Server Scanner Tool.
 
 This module provides functions to analyze SSL/TLS certificates.
 """

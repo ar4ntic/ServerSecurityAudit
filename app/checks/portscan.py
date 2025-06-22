@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Port scanning module for the Security Audit Tool.
+Port scanning module for the Public Server Scanner Tool.
 
 This module provides functions to scan for open ports and identify services.
 """

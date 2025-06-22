@@ -1,4 +1,4 @@
-# PublicServer SecurityScan
+# PublicServerScanner
 
 A comprehensive, cross-platform security assessment tool for public-facing servers. This Python applic### macOS
 
@@ -6,9 +6,9 @@ A comprehensive, cross-platform security assessment tool for public-facing serve
 2. Download the main script and requirements file:
 
    ```sh
-   wget https://github.com/ar4ntic/PublicServerScan/raw/main/StartScan.py
-   wget https://github.com/ar4ntic/PublicServerScan/raw/main/requirements-dev.txt
-   wget -r -np -nH --cut-dirs=2 https://github.com/ar4ntic/PublicServerScan/raw/main/app/omates vulnerability scanning and security auditing processes to identify misconfigurations and vulnerabilities in internet-exposed systems. Designed for security professionals, system administrators, and DevOps engineers who need an efficient way to evaluate their external attack surface.
+   wget https://github.com/ar4ntic/PublicServerScanner/raw/main/StartScan.py
+   wget https://github.com/ar4ntic/PublicServerScanner/raw/main/requirements-dev.txt
+   wget -r -np -nH --cut-dirs=2 https://github.com/ar4ntic/PublicServerScanner/raw/main/app/ vulnerability scanning and security scanning processes to identify misconfigurations and vulnerabilities in internet-exposed systems. Designed for security professionals, system administrators, and DevOps engineers who need an efficient way to evaluate their external attack surface.
 
 ## Features
 
@@ -25,7 +25,7 @@ A comprehensive, cross-platform security assessment tool for public-facing serve
 
 ## Why Use This Tool?
 
-PublicServer SecurityScan is specifically tailored for internet-facing systems where security vulnerabilities can lead to significant breaches. It functions as both a vulnerability scanner and security auditor, identifying misconfigurations and security weaknesses in externally accessible services. Security professionals use this tool to:
+Public Server Scanner is specifically tailored for internet-facing systems where security vulnerabilities can lead to significant breaches. It functions as both a vulnerability scanner and security scanner, identifying misconfigurations and security weaknesses in externally accessible services. Security professionals use this tool to:
 
 - Discover exposed services and potentially vulnerable endpoints
 - Assess TLS/SSL configuration and certificate validity
@@ -50,7 +50,7 @@ For comprehensive information about the tool, security checks, best practices, a
 
 ## Prerequisites
 
-Before running PublicServer SecurityScan, you need Python 3.8 or newer.
+Before running Public Server Scanner, you need Python 3.8 or newer.
 
 - Some security checks require external command-line tools such as `nmap`, `curl`, `dig`, `openssl`, etc. Please ensure these are installed and available in your system PATH for full functionality.
   - On macOS, you can install most tools with Homebrew, e.g.:
@@ -99,7 +99,7 @@ If you see a version number 3.8 or higher, you are ready to proceed.
 
 ## Installation
 
-You can install and run the PublicServer SecurityScan app without cloning the entire repository. Simply download the latest version of the app using `wget` or `curl`.
+You can install and run the Public Server Scanner app without cloning the entire repository. Simply download the latest version of the app using `wget` or `curl`.
 
 ### Windows
 
@@ -107,14 +107,14 @@ You can install and run the PublicServer SecurityScan app without cloning the en
 2. Download the main script and requirements file:
 
    ```sh
-   wget https://github.com/ar4ntic/or w/main/StartScan.py
-   wget https://github.com/ar4ntic/PublicServerScan/raw/main/requirements-dev.txt
-   wget -r -np -nH --cut-dirs=2 https://github.com/ar4ntic/PublicServerScan/raw/main/app/
+   wget https://github.com/ar4ntic/PublicServerScanner/raw/main/StartScan.py
+   wget https://github.com/ar4ntic/PublicServerScanner/raw/main/requirements-dev.txt
+   wget -r -np -nH --cut-dirs=2 https://github.com/ar4ntic/PublicServerScanner/raw/main/app/
    ```
    Or use `curl`:
    ```sh
-   curl -O https://github.com/ar4ntic/ServerSecurityAudit/raw/main/StartAudit.py
-   curl -O https://github.com/ar4ntic/ServerSecurityAudit/raw/main/requirements-dev.txt
+   curl -O https://github.com/ar4ntic/PublicServerScanner/raw/main/StartScan.py
+   curl -O https://github.com/ar4ntic/PublicServerScanner/raw/main/requirements-dev.txt
    # Download the app directory as needed
    ```
 
@@ -143,14 +143,14 @@ You can install and run the PublicServer SecurityScan app without cloning the en
 2. Download the main script and requirements file:
 
    ```sh
-   wget https://github.com/ar4ntic/ServerSecurityAudit/raw/main/StartAudit.py
-   wget https://github.com/ar4ntic/ServerSecurityAudit/raw/main/requirements-dev.txt
-   wget -r -np -nH --cut-dirs=2 https://github.com/ar4ntic/PublicServerScan/raw/main/app/
+   wget https://github.com/ar4ntic/PublicServerScanner/raw/main/StartScan.py
+   wget https://github.com/ar4ntic/PublicServerScanner/raw/main/requirements-dev.txt
+   wget -r -np -nH --cut-dirs=2 https://github.com/ar4ntic/PublicServerScanner/raw/main/app/
    ```
    Or use `curl`:
    ```sh
-   curl -O https://github.com/ar4ntic/PublicServerScan/raw/main/StartScan.py
-   curl -O https://github.com/ar4ntic/PublicServerScan/raw/main/requirements-dev.txt
+   curl -O https://github.com/ar4ntic/PublicServerScanner/raw/main/StartScan.py
+   curl -O https://github.com/ar4ntic/PublicServerScanner/raw/main/requirements-dev.txt
    # Download the app directory as needed
    ```
 
@@ -188,7 +188,7 @@ If you encounter issues or have suggestions, please:
 
 1. Check the [comprehensive documentation](documentation.md) for answers to common questions and troubleshooting tips.
 2. Review the [FAQ section](documentation.md#faq) for solutions to frequently encountered issues.
-3. If you still need help, open an issue on the [GitHub repository](https://github.com/ar4ntic/PublicServerScan/issues) with details about your problem.
+3. If you still need help, open an issue on the [GitHub repository](https://github.com/ar4ntic/PublicServerScanner/issues) with details about your problem.
 
 ## Notes
 
@@ -217,4 +217,4 @@ Special thanks to the maintainers and contributors of these projects for their v
 
 ---
 
-**Found a bug? Have a feature request?** Please open an [issue](https://github.com/ar4ntic/PublicServerScan/issues)!
+**Found a bug? Have a feature request?** Please open an [issue](https://github.com/ar4ntic/PublicServerScanner/issues)!

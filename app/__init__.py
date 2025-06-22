@@ -1,5 +1,5 @@
 """
-PublicServer SecurityScan Tool - Package Definition
+Public Server Scanner Tool - Package Definition
 
 This package provides a comprehensive tool for running various security
 scanners on public-facing servers, with a clean per-user install directory,

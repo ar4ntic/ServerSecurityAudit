@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Directory brute force module for the Security Audit Tool.
+Directory brute force module for the Public Server Scanner Tool.
 
 This module provides functions to discover hidden directories and files
 on web servers using wordlists.

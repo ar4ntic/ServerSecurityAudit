@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Configuration manager for the Security Audit Tool.
+Configuration manager for the Public Server Scanner Tool.
 
 This module provides a Config class to load, save, and access application configuration.
 """
@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 
 class Config:
     """
-    Configuration manager class for the Security Audit Tool.
+    Configuration manager class for the Public Server Scanner Tool.
     """
     
     def __init__(self, config_path: Optional[Path] = None):

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Command-line interface for the PublicServer SecurityScan Tool.
+Command-line interface for the Public Server Scanner Tool.
 
 This module parses command-line arguments and calls the main functionality
 in core.py to run security scans.
@@ -56,7 +56,7 @@ def parse_args(args: Optional[List[str]] = None) -> argparse.Namespace:
     parser.add_argument(
         "--install", "-i", 
         action="store_true", 
-        help="Run the installer before starting the audit"
+        help="Run the installer before starting the scan"
     )
     parser.add_argument(
         "--no-venv", 
@@ -101,7 +101,7 @@ def main():
     if args.headless:
         args.gui = False
     
-    # Run the security audit
+    # Run the security scan
     success = run(args)
     
     # Return exit code based on success

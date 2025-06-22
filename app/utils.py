@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Utility functions for the PublicServer SecurityScan Tool.
+Utility functions for the Public Server Scanner Tool.
 
 This module provides shared helper functions for subprocess operations,
 logging, path handling, and other common operations.

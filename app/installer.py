@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Installer module for the PublicServer SecurityScan Tool.
+Installer module for the Public Server Scanner Tool.
 
 This module handles creating the per-user installation directory structure,
 setting up virtual environments, and downloading wordlists.
@@ -134,7 +134,7 @@ def setup_virtual_environment(no_venv=False):
 
 def download_wordlists(skip_wordlists=False):
     """
-    Download wordlists for use with the PublicServer SecurityScan tool.
+    Download wordlists for use with the Public Server Scanner tool.
     
     Args:
         skip_wordlists (bool): If True, skip downloading wordlists.

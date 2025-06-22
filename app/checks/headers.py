@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-HTTP Headers analysis module for the Security Audit Tool.
+HTTP Headers analysis module for the Public Server Scanner Tool.
 
 This module provides functions to analyze HTTP response headers for security issues.
 """

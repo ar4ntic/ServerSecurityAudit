@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-DNS enumeration module for the Security Audit Tool.
+DNS enumeration module for the Public Server Scanner Tool.
 
 This module provides functions to perform DNS enumeration on target domains.
 """

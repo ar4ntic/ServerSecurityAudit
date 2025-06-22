@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-PublicServer SecurityScan Tool - Main Execution Script
+Public Server Scanner Tool - Main Execution Script
 
 This script serves as the main entry point for running security scans on target servers.
 It provides both command-line and GUI interfaces using the refactored package structure.
 
 Usage:
-    python StartAudit.py [--target example.com] [--checks ping port_scan] [--gui] [--headless]
+    python StartScan.py [--target example.com] [--checks ping port_scan] [--gui] [--headless]
 """
 
 import sys

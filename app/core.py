@@ -1,6 +1,5 @@
-#!/usr/bin/env python3
 """
-Core functionality for the PublicServer SecurityScan Tool.
+Core functionality for the Public Server Scanner Tool.
 
 This module orchestrates all the security scans and provides the main
 run function for both command-line and GUI operation.
@@ -42,7 +41,7 @@ def get_available_checks() -> Dict[str, Callable]:
     }
 
 class TaskRunner:
-    """Run audit tasks with progress updates."""
+    """Run scan tasks with progress updates."""
     
     def __init__(self, tasks, target, output_dir, 
                  progress_callback=None, complete_callback=None):
@@ -209,7 +208,7 @@ def run_gui_mode(target, output_dir, checks):
     
     # Create progress window
     root = tk.Tk()
-    root.title("PublicServer SecurityScan Progress")
+    root.title("Public Server Scanner Progress")
     root.geometry("600x400")
     
     # Add progress elements
@@ -255,9 +254,9 @@ def run_gui_mode(target, output_dir, checks):
         status_text.see(tk.END)
         root.update_idletasks()
         
-    def audit_completed(task_results):
-        """Handle audit completion."""
-        status_text.insert(tk.END, "\n=== Audit Completed ===\n")
+    def scan_completed(task_results):
+        """Handle scan completion."""
+        status_text.insert(tk.END, "\n=== Scan Completed ===\n")
         
         # Report on successes and failures
         failures = [name for name, success in task_results if not success]
@@ -285,7 +284,7 @@ def run_gui_mode(target, output_dir, checks):
         target=target,
         output_dir=str(output_dir),
         progress_callback=update_progress,
-        complete_callback=audit_completed
+        complete_callback=scan_completed
     )
     
     # Add a cancel button

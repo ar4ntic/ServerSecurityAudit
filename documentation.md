@@ -1,9 +1,9 @@
-# PublicServer SecurityScan: Documentation, Usage & Knowledge Base
+# Public Server Scanner: Documentation, Usage & Knowledge Base
 
 
-- [PublicServer SecurityScan: Documentation, Usage \& Knowledge Base](#publicserver-securityscan-documentation-usage--knowledge-base)
+- [Public Server Scanner: Documentation, Usage \& Knowledge Base](#public-server-scanner-documentation-usage--knowledge-base)
 - [Overview](#overview)
-- [How the Audit Works](#how-the-audit-works)
+- [How the Security Scan Works](#how-the-security-scan-works)
 - [Detailed Check Explanations](#detailed-check-explanations)
   - [Port Scan](#port-scan)
   - [Service/Version Scan](#serviceversion-scan)
@@ -62,7 +62,7 @@
 ---
 
 # Overview
-The PublicServer SecurityScan tool is a comprehensive vulnerability assessment and security auditing solution specifically designed for internet-exposed systems. It helps administrators, DevOps engineers, and security professionals identify, assess, and remediate security weaknesses in their external attack surface. This tool combines multiple security scanning capabilities that would typically require several specialized tools and security expertise to perform manually.
+The Public Server Scanner tool is a comprehensive vulnerability assessment and security scanning solution specifically designed for internet-exposed systems. It helps administrators, DevOps engineers, and security professionals identify, assess, and remediate security weaknesses in their external attack surface. This tool combines multiple security scanning capabilities that would typically require several specialized tools and security expertise to perform manually.
 
 Key features of this tool include:
 
@@ -77,7 +77,7 @@ Whether you're preparing a server for production deployment, conducting regular 
 ---
 
 # How the Security Scan Works
-The PublicServer SecurityScan tool employs a modular architecture where each security check is implemented as a separate Python module that integrates with external security tools. When you run the scan, the following process takes place:
+The Public Server Scanner tool employs a modular architecture where each security check is implemented as a separate Python module that integrates with external security tools. When you run the scan, the following process takes place:
 
 1. **Initialization**: The tool sets up the necessary environment, validates prerequisites, and creates directories for output.
 
@@ -477,7 +477,7 @@ Each security check is designed to run independently, so you can choose which on
 ---
 
 # How to Use the App
-The PublicServer SecurityScan tool is designed to be user-friendly while providing deep security insights. Here's a detailed guide on how to use it effectively:
+The Public Server Scanner tool is designed to be user-friendly while providing deep security insights. Here's a detailed guide on how to use it effectively:
 
 ## Command-Line Usage
 
@@ -490,10 +490,10 @@ The PublicServer SecurityScan tool is designed to be user-friendly while providi
 
 | **Option** | **Format** | **Description** | **Example** |
 |--------|--------|-------------|---------|
-| Basic Usage | `python StartAudit.py` | Runs the tool with interactive prompts | `python StartAudit.py` |
-| Target | `--target` | Specifies the server to audit | `--target example.com` |
+| Basic Usage | `python StartScan.py` | Runs the tool with interactive prompts | `python StartScan.py` |
+| Target | `--target` | Specifies the server to scan | `--target example.com` |
 | Checks | `--checks` | Comma-separated list of specific checks to run | `--checks portscan,headers,cert` |
-| Output Directory | `--output-dir` | Custom location for results | `--output-dir ./my-audit-results` |
+| Output Directory | `--output-dir` | Custom location for results | `--output-dir ./my-scan-results` |
 | Verbose | `--verbose` | Displays detailed progress information | `--verbose` |
 | Help | `--help` | Displays available options and usage | `--help` |
 | Version | `--version` | Displays the tool version | `--version` |
@@ -503,19 +503,19 @@ The PublicServer SecurityScan tool is designed to be user-friendly while providi
 
 ```bash
 # Basic interactive usage
-python StartAudit.py
+python StartScan.py
 
-# Audit a specific target with all checks
-python StartAudit.py --target example.com
+# Scan a specific target with all checks
+python StartScan.py --target example.com
 
 # Run only specific security checks
-python StartAudit.py --target example.com --checks portscan,headers,cert
+python StartScan.py --target example.com --checks portscan,headers,cert
 
 # Specify a custom output directory
-python StartAudit.py --target example.com --output-dir ./my-audit-results
+python StartScan.py --target example.com --output-dir ./my-scan-results
 
 # Run in verbose mode for more detailed output
-python StartAudit.py --target example.com --verbose
+python StartScan.py --target example.com --verbose
 ```
 
 Once started, the tool will:
@@ -549,7 +549,7 @@ Once started, the tool will:
 
 # Understanding the Results
 
-The PublicServer SecurityScan tool provides results in multiple formats to help you easily identify and address security issues.
+The Public Server Scanner tool provides results in multiple formats to help you easily identify and address security issues.
 
 ## Reading the Output
 
@@ -595,12 +595,12 @@ Each finding includes:
 
 # Example Output
 
-Below are examples of what output from the PublicServer SecurityScan tool typically looks like. This will help you understand how to interpret the results.
+Below are examples of what output from the Public Server Scanner tool typically looks like. This will help you understand how to interpret the results.
 
 ## Summary Output Example
 
 ```
-==== PUBLICSERVER SECURITYSCAN SUMMARY ====
+==== PUBLIC SERVER SCANNER SUMMARY ====
 Target: example.com (203.0.113.10)
 Scan Date: 2023-06-15 14:30:22
 Report ID: SSA-202306151430
@@ -913,7 +913,7 @@ Understanding common vulnerabilities helps prioritize your security efforts:
 
 ## Customization and Extension
 
-The PublicServer SecurityScan tool is designed to be modular and extensible, allowing you to tailor it to your specific security needs.
+The Public Server Scanner tool is designed to be modular and extensible, allowing you to tailor it to your specific security needs.
 
 ## Customizing Existing Checks
 
@@ -1021,7 +1021,7 @@ The tool supports various advanced configuration options:
 
 ## Tips for Effective Use
 
-Getting the most out of your security scans requires proper planning and follow-through. Here are practical tips for maximizing the effectiveness of the PublicServer SecurityScan tool:
+Getting the most out of your security scans requires proper planning and follow-through. Here are practical tips for maximizing the effectiveness of the Public Server Scanner tool:
 
 | **Best Practice Category** | **Recommendations** | **Benefits** | **Implementation Complexity** |
 |----------------------|-----------------|----------|--------------------------|
@@ -1035,7 +1035,7 @@ Getting the most out of your security scans requires proper planning and follow-
 
 ## Security Tools Reference
 
-The PublicServer SecurityScan tool integrates with and complements many popular security tools. Understanding these tools helps you interpret results and extend your security testing:
+The Public Server Scanner tool integrates with and complements many popular security tools. Understanding these tools helps you interpret results and extend your security testing:
 
 ## Network Security Tools
 
@@ -1243,7 +1243,7 @@ Understanding security terminology is crucial for interpreting audit results eff
 | **Question** | **Answer** |
 |---------|--------|
 | **Can I use this tool on internal/private servers?** | Yes, the tool is suitable for both internal and public-facing servers. However, always ensure you have proper authorization before scanning any system, and be aware that some checks may generate significant traffic. |
-| **Will this tool make changes to my server?** | No, the PublicServer SecurityScan tool is designed as a read-only assessment tool. It does not modify system configurations or make changes to your server. All operations are non-intrusive. |
+| **Will this tool make changes to my server?** | No, the Public Server Scanner tool is designed as a read-only assessment tool. It does not modify system configurations or make changes to your server. All operations are non-intrusive. |
 | **How often should I run security audits?** | For critical systems, monthly audits are recommended. Less critical systems should be audited at least quarterly. Additionally, run audits after significant system changes, upgrades, or before moving systems to production. |
 
 ## Technical Questions
@@ -1276,7 +1276,7 @@ If you have questions about specific findings or how to resolve them, please:
 
 1. **Check the Documentation First**: Many common questions are already answered in this document or the README.
 
-2. **Open an Issue**: If you need further assistance, open an issue on the [GitHub repository](https://github.com/ar4ntic/ServerSecurityAudit/issues) with:
+2. **Open an Issue**: If you need further assistance, open an issue on the [GitHub repository](https://github.com/ar4ntic/PublicServerScanner/issues) with:
    - A clear description of your question or problem
    - Relevant sections of your output (with sensitive information removed)
    - Your operating system and tool version

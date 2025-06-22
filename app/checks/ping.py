@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Ping check module for the Security Audit Tool.
+Ping check module for the Public Server Scanner Tool.
 
 This module provides functions to ping targets to verify reachability.
 """
